@@ -16,4 +16,5 @@
 	<bean id="httpUtil" class="com.vikram.openidconnect.login.core.util.HttpClientUtil"></bean>
 	<bean id="tokenResponseFetcher" class="com.vikram.openidconnect.login.core.DefaultIdentityFetcher"></bean> 
 	<bean id="googleDiscovery" class="com.vikram.openidconnect.login.core.google.GoogleOpenconnectDiscovery"></bean>
+	<bean id="identityAccessor" class="com.vikram.openidconnect.login.core.identity.DefaultIdentityAccessor"></bean>
 </beans>
