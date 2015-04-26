@@ -1,10 +1,10 @@
-package com.vikram.openconnect.login.core.identity;
+package com.vikram.openidconnect.login.core.identity;
 
 import org.apache.http.HttpException;
 import org.json.simple.JSONObject;
 
-import com.vikram.openconnect.login.core.IIdentityFetcher;
-import com.vikram.openconnect.login.core.providers.OAuthProvider;
+import com.vikram.openidconnect.login.core.IIdentityFetcher;
+import com.vikram.openidconnect.login.core.providers.OAuthProvider;
 
 public class AuthCodeIdentity implements Identity {
 

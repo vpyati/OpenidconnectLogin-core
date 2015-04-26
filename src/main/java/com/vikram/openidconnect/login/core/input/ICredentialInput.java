@@ -1,6 +1,6 @@
-package com.vikram.openconnect.login.core.input;
+package com.vikram.openidconnect.login.core.input;
 
-import com.vikram.openconnect.login.core.providers.OAuthProvider;
+import com.vikram.openidconnect.login.core.providers.OAuthProvider;
 
 public interface ICredentialInput {
 	

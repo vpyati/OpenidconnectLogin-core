@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core;
+package com.vikram.openidconnect.login.core;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,8 +7,8 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.vikram.openconnect.login.core.google.GoogleOpenconnectDiscovery;
-import com.vikram.openconnect.login.core.providers.OAuthProvider;
+import com.vikram.openidconnect.login.core.google.GoogleOpenconnectDiscovery;
+import com.vikram.openidconnect.login.core.providers.OAuthProvider;
 
 public class OpenconnectDiscoveryFactory implements IOpenconnectDiscoveryFactory {
 	

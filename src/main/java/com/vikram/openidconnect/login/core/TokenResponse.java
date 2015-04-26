@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core;
+package com.vikram.openidconnect.login.core;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

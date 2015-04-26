@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core;
+package com.vikram.openidconnect.login.core;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.vikram.openconnect.login.core.util.HttpClientUtil;
+import com.vikram.openidconnect.login.core.util.HttpClientUtil;
 
 public class DefaultOpenconnectDiscovery implements IOpenconnectDiscovery {
 

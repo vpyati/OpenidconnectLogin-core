@@ -1,6 +1,6 @@
-package com.vikram.openconnect.login.core.google;
+package com.vikram.openidconnect.login.core.google;
 
-import com.vikram.openconnect.login.core.DefaultOpenconnectDiscovery;
+import com.vikram.openidconnect.login.core.DefaultOpenconnectDiscovery;
 
 public class GoogleOpenconnectDiscovery extends DefaultOpenconnectDiscovery {
 

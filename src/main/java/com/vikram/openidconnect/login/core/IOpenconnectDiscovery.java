@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core;
+package com.vikram.openidconnect.login.core;
 
 public interface IOpenconnectDiscovery {
 	

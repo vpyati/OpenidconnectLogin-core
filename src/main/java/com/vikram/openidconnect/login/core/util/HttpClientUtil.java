@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core.util;
+package com.vikram.openidconnect.login.core.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

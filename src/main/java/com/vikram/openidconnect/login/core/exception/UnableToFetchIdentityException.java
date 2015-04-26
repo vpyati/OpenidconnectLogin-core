@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core.exception;
+package com.vikram.openidconnect.login.core.exception;
 
 public class UnableToFetchIdentityException extends RuntimeException {
 

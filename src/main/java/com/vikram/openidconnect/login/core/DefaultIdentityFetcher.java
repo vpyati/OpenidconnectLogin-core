@@ -1,4 +1,4 @@
-package com.vikram.openconnect.login.core;
+package com.vikram.openidconnect.login.core;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -10,10 +10,10 @@ import org.json.simple.JSONValue;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vikram.openconnect.login.core.input.ICredentialInput;
-import com.vikram.openconnect.login.core.input.IOAuthCredentials;
-import com.vikram.openconnect.login.core.providers.OAuthProvider;
-import com.vikram.openconnect.login.core.util.HttpClientUtil;
+import com.vikram.openidconnect.login.core.input.ICredentialInput;
+import com.vikram.openidconnect.login.core.input.IOAuthCredentials;
+import com.vikram.openidconnect.login.core.providers.OAuthProvider;
+import com.vikram.openidconnect.login.core.util.HttpClientUtil;
 
 public class DefaultIdentityFetcher implements IIdentityFetcher {
 

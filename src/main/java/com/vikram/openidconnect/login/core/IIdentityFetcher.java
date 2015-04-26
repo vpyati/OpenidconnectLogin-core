@@ -1,9 +1,9 @@
-package com.vikram.openconnect.login.core;
+package com.vikram.openidconnect.login.core;
 
 import org.apache.http.HttpException;
 import org.json.simple.JSONObject;
 
-import com.vikram.openconnect.login.core.providers.OAuthProvider;
+import com.vikram.openidconnect.login.core.providers.OAuthProvider;
 
 public interface IIdentityFetcher {
 	

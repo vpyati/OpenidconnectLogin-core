@@ -1,9 +1,9 @@
-package com.vikram.openconnect.login.core.input;
+package com.vikram.openidconnect.login.core.input;
 
 import java.util.List;
 
-import com.vikram.openconnect.login.core.exception.NoOAuthCredentialException;
-import com.vikram.openconnect.login.core.providers.OAuthProvider;
+import com.vikram.openidconnect.login.core.exception.NoOAuthCredentialException;
+import com.vikram.openidconnect.login.core.providers.OAuthProvider;
 
 public class OAuthCredentials implements IOAuthCredentials {
 	
