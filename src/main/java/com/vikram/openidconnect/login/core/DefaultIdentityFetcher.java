@@ -7,6 +7,8 @@ import java.util.Map;
 import org.apache.http.HttpException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,12 +29,15 @@ public class DefaultIdentityFetcher implements IIdentityFetcher {
 	private IOAuthCredentials oauthCredentials;
 	
 	
+	private static Logger logger = LoggerFactory.getLogger(DefaultIdentityFetcher.class);
+	
 	@Override
 	public JSONObject getPropertiesByAccessToken(String accessToken, OAuthProvider provider) throws HttpException {
 
 		IOpenconnectDiscovery discovery = discoveryFactory.get(provider);
 		String userInfoEndpoint = discovery.getUserinfo_endpoint();
-
+		
+		logger.info("Invoking userinfo endpoint to get user details by providing accessToken");		
 		String jsonResponse = httpUtil.getJSONResponse(userInfoEndpoint + "?access_token=" + accessToken);
 		return (JSONObject) JSONValue.parse(jsonResponse);
 	}
@@ -46,6 +51,8 @@ public class DefaultIdentityFetcher implements IIdentityFetcher {
 	}
 	
 	private TokenResponse getTokenResponseInternal(String authCode, ICredentialInput credentials, IOpenconnectDiscovery discovery) {
+		
+		logger.info("Invoking tokenresponse endpoint to get the accesstoken");
 		String tokenEndpoint = discovery.getToken_endpoint();
 		
 		Map<String, String> postParams = new HashMap<String, String>();
@@ -68,6 +75,7 @@ public class DefaultIdentityFetcher implements IIdentityFetcher {
 		try {
 			return httpUtil.getJSONResponse(tokenEndpoint, postParams);
 		} catch (HttpException e) {
+			logger.error("Error while getting token response", e);
 			return null;
 		}
 	}
@@ -78,6 +86,7 @@ public class DefaultIdentityFetcher implements IIdentityFetcher {
 			ObjectMapper mapper = new ObjectMapper();
 			return mapper.readValue(response,TokenResponse.class);
 		} catch (IOException e) {
+			logger.error("Error while parsing token response", e);
 			return null;
 		}
 	}
